@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import GlobalStyle from "./components/GlobalStyles/index.jsx"
+import GlobalStyle from "./components/GlobalStyles"
 
 const GradientBackground = styled.div`
 background: linear-gradient(175deg, 
