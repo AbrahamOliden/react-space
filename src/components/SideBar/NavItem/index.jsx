@@ -7,6 +7,7 @@ const StyledElement = styled.li`
     margin-bottom: 30px;
     gap: 1rem;
     color: ${props => props.$active ? '#7B78E5' : '#D9D9D9'};
+    font-family: ${props => props.$active ? 'GandhiSansBold' : 'GandhiSansRegular'};
 `;
 
 function NavItem({children, activeIcon, innactiveIcon, active=false}) {
