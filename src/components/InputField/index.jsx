@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import search from './assets/search.png';
+import search from '../.././assets/search.png';
 
 const StyledInput = styled.input`
     padding: 18px 16px;
