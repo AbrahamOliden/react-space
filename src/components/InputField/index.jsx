@@ -1,6 +1,12 @@
 import styled from "styled-components";
 import search from '../.././assets/search.png';
 
+const StyledContainer = styled.div`
+    position: relative;
+    display: inline-block;
+    min-height: fit-content;
+`;
+
 const StyledInput = styled.input`
     padding: 18px 16px;
     border-radius: 10px;
@@ -25,9 +31,10 @@ const StyledIcon = styled.img`
 
 function InputField() {
     return (
-        <StyledInput placeholder="What are you looking for?" >
+        <StyledContainer>
+            <StyledInput placeholder="What are you looking for?" />
             <StyledIcon src={search} alt='magnifying glass' />
-        </StyledInput>
+        </StyledContainer>
     );
 };
 
