@@ -183,4 +183,6 @@ template {
   display: none;
 }
 
-`
+`;
+
+export default GlobalStyle;
