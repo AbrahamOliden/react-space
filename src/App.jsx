@@ -1,7 +1,6 @@
 import styled from "styled-components"
 import GlobalStyle from "./components/GlobalStyles"
 import Header from "./components/Header"
-import InputField from "./components/InputField"
 
 const GradientBackground = styled.div`
 background: linear-gradient(175deg, 
@@ -16,7 +15,6 @@ function App() {
       <GradientBackground>
         <GlobalStyle />
         <Header />
-        <InputField />
       </GradientBackground>
     </>
   )
