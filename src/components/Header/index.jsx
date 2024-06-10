@@ -4,6 +4,9 @@ const StyledHeader = styled.header`
     display: flex;
     justify-content: space-between;
     padding: 60px 24px;
+    img{
+        width: 212px;
+    }
 `;
 
 function Header() {
