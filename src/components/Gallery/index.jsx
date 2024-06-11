@@ -15,6 +15,13 @@ const MainGallery = styled.section`
     flex-grow: 1;
 `;
 
+const CardContainer = styled.section`
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: 24px;
+`
+
 function Gallery({ images }) {
 
     return (
@@ -23,9 +30,16 @@ function Gallery({ images }) {
             <GalleryContainer>
                 <MainGallery>
                     <Title>Search through the gallery</Title>
+                    <CardContainer>
                     {images.map( image => {
-                        return <Card key={image.id} data={image} favActive={favActive} favInnactive={favInnactive} expand={expand}></Card>
+                        return <Card key={image.id} 
+                            data={image} 
+                            favActive={favActive} 
+                            favInnactive={favInnactive} 
+                            expand={expand}>
+                        </Card>
                     })}
+                    </CardContainer>
                 </MainGallery>
 
                 <Populars />
