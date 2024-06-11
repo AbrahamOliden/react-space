@@ -5,6 +5,8 @@ import SideBar from "./components/SideBar"
 import Banner from "./components/Banner"
 import backgroundImage from './assets/banner.png'
 import Gallery from "./components/Gallery"
+import photos from "./fotos.json";
+import { useEffect, useState } from "react";
 
 const GradientBackground = styled.div`
   background: linear-gradient(175deg, 
@@ -36,6 +38,8 @@ const GalleryContainer = styled.section`
 
 function App() {
 
+  const [images, setImages] = useState(photos);
+
   return (
     <>
       <GradientBackground>
@@ -49,7 +53,7 @@ function App() {
             <GalleryContainer>
 
               <Banner text={'The most complete space photos gallery'} backgroundImage={backgroundImage} />
-              <Gallery />
+              <Gallery images={images} />
 
             </GalleryContainer>
           </MainContainer>
