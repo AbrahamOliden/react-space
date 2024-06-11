@@ -3,7 +3,8 @@ import Tag from "./Tags";
 import Title from "../Title";
 import Populars from "./Populars";
 import Card from "./Card";
-import fav from '/iconos/favorito.png';
+import favActive from "/iconos/favorito-activo.png";
+import favInnactive from '/iconos/favorito.png';
 import expand from "/iconos/expandir.png";
 
 const GalleryContainer = styled.div`
@@ -23,7 +24,7 @@ function Gallery({ images }) {
                 <MainGallery>
                     <Title>Search through the gallery</Title>
                     {images.map( image => {
-                        return <Card data={image} fav={fav} expand={expand}></Card>
+                        return <Card key={image.id} data={image} favActive={favActive} favInnactive={favInnactive} expand={expand}></Card>
                     })}
                 </MainGallery>
 
