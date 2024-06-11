@@ -27,6 +27,13 @@ const MainContainer = styled.main`
   justify-content: space-between;
 `;
 
+const GalleryContainer = styled.section`
+  display: flex;
+  flex-flow: column nowrap;
+  width: 80%;
+  flex-grow: 1;
+`;
+
 function App() {
 
   return (
@@ -35,11 +42,17 @@ function App() {
         <GlobalStyle />
         <Header />
         <AppContainer>
+
           <MainContainer>
+
             <SideBar />
-            <Banner text={'The most complete space photos gallery'} backgroundImage={backgroundImage} />
+            <GalleryContainer>
+
+              <Banner text={'The most complete space photos gallery'} backgroundImage={backgroundImage} />
+              <Gallery />
+
+            </GalleryContainer>
           </MainContainer>
-          <Gallery />
         </AppContainer>
         
       </GradientBackground>
