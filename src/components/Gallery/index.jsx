@@ -2,6 +2,9 @@ import styled from "styled-components";
 import Tag from "./Tags";
 import Title from "../Title";
 import Populars from "./Populars";
+import Card from "./Card";
+import fav from '/iconos/favorito.png';
+import expand from "/iconos/expandir.png";
 
 const GalleryContainer = styled.div`
     display: flex;
@@ -20,7 +23,7 @@ function Gallery({ images }) {
                 <MainGallery>
                     <Title>Search through the gallery</Title>
                     {images.map( image => {
-                        return <p key={image.id} >{image.titulo}</p>
+                        return <Card data={image} fav={fav} expand={expand}></Card>
                     })}
                 </MainGallery>
 
