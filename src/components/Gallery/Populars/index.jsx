@@ -2,7 +2,7 @@ import Title from "../../Title";
 
 function Populars() {
     return (
-        <Title>Populars</Title>
+        <Title $align={'center'} >Populars</Title>
     );
 };
 
