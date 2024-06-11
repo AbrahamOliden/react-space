@@ -28,7 +28,6 @@ const StyledButton = styled.button`
 `
 
 function Tag() {
-    console.log(tags);
     return <TagsContainer>
     <p>Search by tags:</p>
 
