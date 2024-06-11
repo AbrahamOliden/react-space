@@ -11,14 +11,17 @@ const MainGallery = styled.section`
     flex-grow: 1;
 `;
 
-function Gallery() {
+function Gallery({ images }) {
+
     return (
         <>
             <Tag />
             <GalleryContainer>
                 <MainGallery>
                     <Title>Search through the gallery</Title>
-
+                    {images.map( image => {
+                        return <p key={image.id} >{image.titulo}</p>
+                    })}
                 </MainGallery>
 
                 <Populars />
