@@ -6,7 +6,7 @@ const StyledFigure = styled.figure`
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 328px;
-    width: 80%;
+    width: 100%;
     margin: 0;
     align-items: center;
     border-radius: 20px;
