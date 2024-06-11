@@ -12,7 +12,19 @@ const GradientBackground = styled.div`
     #154580 96.76%);
   min-height: 100vh;
   padding: 60px 24px;
-`
+`;
+
+const AppContainer = styled.div`
+  width: 1440px;
+  max-width: 100%;
+  margin: 0 auto;
+`;
+
+const MainContainer = styled.main`
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+`;
 
 function App() {
 
@@ -21,8 +33,13 @@ function App() {
       <GradientBackground>
         <GlobalStyle />
         <Header />
-        <SideBar />
-        <Banner text={'The most complete space gallery'} backgroundImage={backgroundImage} />
+        <AppContainer>
+          <MainContainer>
+            <SideBar />
+            <Banner text={'The most complete space gallery'} backgroundImage={backgroundImage} />
+          </MainContainer>
+        </AppContainer>
+        
       </GradientBackground>
     </>
   )
