@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import Title from "../Title";
 
 function Gallery() {
     return (
-        <h2>Search through the gallery</h2>
+        <Title>Search through the gallery</Title>
     );
 };
 
