@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 const StyledFigure = styled.figure`
-    width: ${props => props.$expand ? '90%' : '460px'};
+    width: ${props => props.$expand ? '90%' : '400px'};
     display: flex;
     flex-flow: column nowrap;
     position: relative;
+    margin: 0;
     & > img {
         border-radius: 20px 20px 0 0;
     }
