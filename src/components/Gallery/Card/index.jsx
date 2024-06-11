@@ -42,23 +42,24 @@ const StyledFigure = styled.figure`
     }
 `;
 
-function Card({ data, favActive, favInnactive, expand }) {
+function Card({ data=[], favActive, favInnactive, expandIcon, expand=false }) {
 
     const {titulo, fuente, path} = data;
 
     return (
-        <StyledFigure $expand={false} >
+        <StyledFigure $expand={expand} >
             <img src={path} alt={titulo} />
             <figcaption>
                 <h3>{titulo}</h3>
                 <h4>{fuente}</h4>
                 <div>
                     <button>
-                        <img src={favActive} />
+                        <img src={favInnactive} alt="Favorite icon"/>
                     </button>
-                    <button>
-                        <img src={expand} />
-                    </button>
+                    {!expand && <button>
+                        <img src={expandIcon} alt="Expand icon"/>
+                    </button>}
+                    
                 </div>
             </figcaption>
         </StyledFigure>
