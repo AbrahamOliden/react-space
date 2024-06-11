@@ -19,7 +19,10 @@ const StyledButton = styled.button`
     background-color: rgba(217, 217, 217, 0.3);
     color: #FFF;
     font-size: 1.2rem;
-    border: ${props => props.$active ? '2px solid #C98CF1' : 'none'};
+    border: 2px solid transparent;
+    &:hover {
+        border-color: #C98CF1;
+    };
     border-radius: 10px;
     box-sizing: border-box;
 `
