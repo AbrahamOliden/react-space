@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import IconButton from "../../IconButton";
 
 const StyledFigure = styled.figure`
     width: ${props => props.$expand ? '90%' : '400px'};
@@ -25,22 +26,19 @@ const StyledFigure = styled.figure`
             font-weight: 400;
             margin: 0;
         }
-        div {
-            position: absolute;
-            display: flex;
-            right: 24px;
-            bottom: 24px;
-            gap: 24px;
-            button {
-                background-color: #001634;
-                border: none;
-                text-align: center;
-                font-size: 1rem;
-                cursor: pointer;
-            }
-        }
     }
 `;
+
+const StyledFooter = styled.footer`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & > div {
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 16px;
+    }
+`
 
 function Card({ data=[], favActive, favInnactive, expandIcon, expand=false }) {
 
@@ -51,16 +49,19 @@ function Card({ data=[], favActive, favInnactive, expandIcon, expand=false }) {
             <img src={path} alt={titulo} />
             <figcaption>
                 <h3>{titulo}</h3>
-                <h4>{fuente}</h4>
-                <div>
-                    <button>
-                        <img src={favInnactive} alt="Favorite icon"/>
-                    </button>
-                    {!expand && <button>
-                        <img src={expandIcon} alt="Expand icon"/>
-                    </button>}
+                <StyledFooter>
+                    <h4>{fuente}</h4>
+                    <div>
+                        <IconButton>
+                            <img src={favInnactive} alt="Favorite icon"/>
+                        </IconButton>
+                        {!expand && <IconButton aria-hidden={expand} >
+                            <img src={expandIcon} alt="Expand icon"/>
+                        </IconButton>}
+
+                    </div>
                     
-                </div>
+                </StyledFooter>
             </figcaption>
         </StyledFigure>
     )
