@@ -3,11 +3,11 @@ import Tag from "./Tags";
 import Title from "../Title";
 import Populars from "./Populars";
 
-const ImagesContainer = styled.div`
+const GalleryContainer = styled.div`
     display: flex;
 `;
 
-const WTFIsHeDoing = styled.section`
+const MainGallery = styled.section`
     flex-grow: 1;
 `;
 
@@ -15,14 +15,14 @@ function Gallery() {
     return (
         <>
             <Tag />
-            <ImagesContainer>
-                <WTFIsHeDoing>
+            <GalleryContainer>
+                <MainGallery>
                     <Title>Search through the gallery</Title>
 
-                </WTFIsHeDoing>
+                </MainGallery>
 
                 <Populars />
-            </ImagesContainer>
+            </GalleryContainer>
         </>
     );
 };

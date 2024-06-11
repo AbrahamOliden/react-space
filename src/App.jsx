@@ -29,7 +29,7 @@ const MainContainer = styled.main`
   justify-content: space-between;
 `;
 
-const GalleryContainer = styled.section`
+const SectionContainer = styled.section`
   display: flex;
   flex-flow: column nowrap;
   width: 80%;
@@ -50,12 +50,12 @@ function App() {
           <MainContainer>
 
             <SideBar />
-            <GalleryContainer>
+            <SectionContainer>
 
               <Banner text={'The most complete space photos gallery'} backgroundImage={backgroundImage} />
               <Gallery images={images} />
 
-            </GalleryContainer>
+            </SectionContainer>
           </MainContainer>
         </AppContainer>
         
