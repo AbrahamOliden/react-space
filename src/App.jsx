@@ -36,7 +36,7 @@ function App() {
         <AppContainer>
           <MainContainer>
             <SideBar />
-            <Banner text={'The most complete space gallery'} backgroundImage={backgroundImage} />
+            <Banner text={'The most complete space photos gallery'} backgroundImage={backgroundImage} />
           </MainContainer>
         </AppContainer>
         
