@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
-const StyledContainer = styled.figure`
+const StyledFigure = styled.figure`
     display: flex;
     background-image: url(${props => props.$image});
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 328px;
-    max-width: 100%;
+    width: 80%;
+    margin: 0;
     align-items: center;
     border-radius: 20px;
 `;
@@ -22,9 +23,9 @@ const StyledText = styled.h2`
 
 function Banner({ text, backgroundImage }) {
     return (
-    <StyledContainer $image={backgroundImage}>
+    <StyledFigure $image={backgroundImage}>
         <StyledText>{ text }</StyledText>
-    </StyledContainer>
+    </StyledFigure>
     )
 };
 
