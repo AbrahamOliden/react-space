@@ -1,8 +1,8 @@
-
+import Title from "../../Title";
 
 function Populars() {
     return (
-        <p>Populars</p>
+        <Title>Populars</Title>
     );
 };
 
