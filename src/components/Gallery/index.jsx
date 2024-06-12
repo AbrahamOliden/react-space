@@ -4,8 +4,6 @@ import Title from "../Title";
 import Populars from "./Populars";
 import Card from "./Card";
 import favActive from "/iconos/favorito-activo.png";
-import favInnactive from '/iconos/favorito.png';
-import expandIcon from "/iconos/expandir.png";
 
 const GalleryContainer = styled.div`
     display: flex;
@@ -22,7 +20,7 @@ const CardContainer = styled.section`
     gap: 24px;
 `
 
-function Gallery({ images }) {
+function Gallery({ images=[], selectPhoto }) {
 
     return (
         <>
@@ -33,10 +31,9 @@ function Gallery({ images }) {
                     <CardContainer>
                     {images.map( image => {
                         return <Card key={image.id} 
-                            data={image} 
-                            favActive={favActive} 
-                            favInnactive={favInnactive} 
-                            expandIcon={expandIcon}>
+                            data={image}
+                            onZoom={selectPhoto} 
+                            favActive={favActive}>
                         </Card>
                     })}
                     </CardContainer>
