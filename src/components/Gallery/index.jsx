@@ -25,7 +25,7 @@ const PopularsContainer = styled.section`
     flex-flow: column nowrap;
 `;
 
-function Gallery({ images=[], selectPhoto }) {
+function Gallery({ images=[], selectPhoto, favorite }) {
 
     return (
         <>
@@ -38,7 +38,7 @@ function Gallery({ images=[], selectPhoto }) {
                         return <Card key={image.id} 
                             data={image}
                             onZoom={selectPhoto} 
-                            favActive={favActive}>
+                            favorite={favorite}>
                         </Card>
                     })}
                     </CardsContainer>

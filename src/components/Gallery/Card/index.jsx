@@ -40,7 +40,7 @@ const StyledFooter = styled.footer`
     }
 `
 
-function Card({ data, onZoom, favActive, expand=false }) {
+function Card({ data, onZoom, favorite, expand=false }) {
 
     const {titulo, fuente, path} = data;
 
@@ -52,7 +52,7 @@ function Card({ data, onZoom, favActive, expand=false }) {
                 <StyledFooter>
                     <h4>{fuente}</h4>
                     <div>
-                        <IconButton>
+                        <IconButton onClick={() => favorite(data)} >
                             <img src={'/iconos/favorito.png'} alt="Favorite icon"/>
                         </IconButton>
                         {!expand && 

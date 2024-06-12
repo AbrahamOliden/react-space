@@ -42,7 +42,7 @@ function App() {
   const [images, setImages] = useState(photos);
   const [selectedPhoto, SetSelectedPhoto] = useState(null);
 
-  const favorite = ({ photo }) => {
+  const favorite = (photo) => {
     console.log(photo);
   };
 
