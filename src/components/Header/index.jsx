@@ -5,7 +5,7 @@ const StyledHeader = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 60px;
+    padding: 60px 24px;
     img{
         width: 212px;
     }

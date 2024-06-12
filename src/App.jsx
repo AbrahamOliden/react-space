@@ -16,13 +16,14 @@ const GradientBackground = styled.div`
     #04244F 48%, 
     #154580 96.76%);
   min-height: 100vh;
-  padding: 60px 24px;
 `;
 
 const AppContainer = styled.div`
   width: 1440px;
   max-width: 100%;
   margin: 0 auto;
+  padding: 0 24px 60px;
+  box-sizing: border-box;
 `;
 
 const MainContainer = styled.main`
