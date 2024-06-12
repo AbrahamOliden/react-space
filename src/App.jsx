@@ -41,9 +41,17 @@ const SectionContainer = styled.section`
 function App() {
 
   const [images, setImages] = useState(photos);
-  const [selectedPhoto, SetSelectedPhoto] = useState(null);
+  const [selectedPhoto, setSelectedPhoto] = useState(null);
 
   const favorite = (photo) => {
+
+    if (photo.id === selectedPhoto?.id) {
+      setSelectedPhoto({
+        ...selectedPhoto,
+        favorite: !photo.favorite
+      });
+    };
+
     setImages(images.map(galleryPhoto => {
       return {
         ...galleryPhoto,
@@ -70,7 +78,7 @@ function App() {
                 text={'The most complete space photos gallery'} 
                 backgroundImage={backgroundImage} />
               <Gallery 
-                selectPhoto={photo => SetSelectedPhoto(photo)} 
+                selectPhoto={photo => setSelectedPhoto(photo)} 
                 images={images} 
                 favorite={favorite}/>
 
@@ -80,7 +88,7 @@ function App() {
         <ModalZoom 
           photo={selectedPhoto}
           favorite={favorite}
-          onClose={() => SetSelectedPhoto(null)} />
+          onClose={() => setSelectedPhoto(null)} />
         <Footer />
       </GradientBackground>
     </>
