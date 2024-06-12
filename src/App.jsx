@@ -42,6 +42,10 @@ function App() {
   const [images, setImages] = useState(photos);
   const [selectedPhoto, SetSelectedPhoto] = useState(null);
 
+  const favorite = ({ photo }) => {
+    console.log(photo);
+  };
+
   return (
     <>
       <GradientBackground>
@@ -59,7 +63,8 @@ function App() {
                 backgroundImage={backgroundImage} />
               <Gallery 
                 selectPhoto={photo => SetSelectedPhoto(photo)} 
-                images={images} />
+                images={images} 
+                favorite={favorite}/>
 
             </SectionContainer>
           </MainContainer>
