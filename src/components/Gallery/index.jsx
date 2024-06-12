@@ -13,22 +13,27 @@ const MainGallery = styled.section`
     flex-grow: 1;
 `;
 
-const CardContainer = styled.section`
+const CardsContainer = styled.section`
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
     gap: 24px;
-`
+`;
+
+const PopularsContainer = styled.section`
+    display: flex;
+    flex-flow: column nowrap;
+`;
 
 function Gallery({ images=[], selectPhoto }) {
 
     return (
         <>
             <Tag />
-            <GalleryContainer>
+            <GalleryContainer id="Galeria" >
                 <MainGallery>
                     <Title>Search through the gallery</Title>
-                    <CardContainer>
+                    <CardsContainer>
                     {images.map( image => {
                         return <Card key={image.id} 
                             data={image}
@@ -36,10 +41,12 @@ function Gallery({ images=[], selectPhoto }) {
                             favActive={favActive}>
                         </Card>
                     })}
-                    </CardContainer>
+                    </CardsContainer>
                 </MainGallery>
+                <PopularsContainer>
+                    <Populars />
+                </PopularsContainer>
 
-                <Populars />
             </GalleryContainer>
         </>
     );
