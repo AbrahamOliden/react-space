@@ -1,11 +1,44 @@
+import styled from 'styled-components';
+import Card from '../Gallery/Card'
+
+const Overlay = styled.div`
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+`
+
+const StyledDialog = styled.dialog`
+    position: absolute;
+    top: 300px;
+    width: 80%;
+    padding: 0;
+    border-radius: 25px;
+    &>form {
+        width: fit-content;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+`
+
 function ModalZoom({ photo }) {
     return <>
-        <dialog open={!!photo}>
-            <p>Cierrame we</p>
+    {photo && <>
+        <Overlay />
+        <StyledDialog open={!!photo}>
+            <Card data={photo} expand={true}/>
             <form method="dialog">
                 <button>Weno</button>
             </form>
-        </dialog>
+        </StyledDialog>
+    
+    </>
+
+
+    }
     </>
 };
 
