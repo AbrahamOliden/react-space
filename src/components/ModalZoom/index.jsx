@@ -21,6 +21,12 @@ const StyledDialog = styled.dialog`
         position: absolute;
         top: 20px;
         right: 20px;
+        background-color: transparent;
+        button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
     }
 `
 
@@ -31,7 +37,9 @@ function ModalZoom({ photo }) {
         <StyledDialog open={!!photo}>
             <Card data={photo} expand={true}/>
             <form method="dialog">
-                <button>Weno</button>
+                <button>
+                    <img src="/iconos/cerrar.png" alt="close button" />
+                </button>
             </form>
         </StyledDialog>
     
