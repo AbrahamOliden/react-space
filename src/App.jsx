@@ -6,6 +6,7 @@ import Banner from "./components/Banner"
 import backgroundImage from './assets/banner.png'
 import Gallery from "./components/Gallery"
 import photos from "./fotos.json";
+import ModalZoom from "./components/ModalZoom";
 import { useEffect, useState } from "react";
 
 const GradientBackground = styled.div`
@@ -58,6 +59,7 @@ function App() {
             </SectionContainer>
           </MainContainer>
         </AppContainer>
+        <ModalZoom />
         
       </GradientBackground>
     </>

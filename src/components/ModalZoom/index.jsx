@@ -1,6 +1,6 @@
-function ModalZoom() {
+function ModalZoom({ photo }) {
     return <>
-        <dialog open>
+        <dialog open={!!photo}>
             <p>Cierrame we</p>
             <form method="dialog">
                 <button>Weno</button>
