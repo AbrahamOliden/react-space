@@ -2,7 +2,7 @@ import styled from "styled-components";
 import IconButton from "../../IconButton";
 
 const StyledFigure = styled.figure`
-    width: ${props => props.$expand ? '90%' : '400px'};
+    width: ${props => props.$expand ? '100%' : '400px'};
     display: flex;
     flex-flow: column nowrap;
     position: relative;
