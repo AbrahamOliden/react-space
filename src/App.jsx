@@ -43,7 +43,14 @@ function App() {
   const [selectedPhoto, SetSelectedPhoto] = useState(null);
 
   const favorite = (photo) => {
-    console.log(photo);
+    setImages(photos.map(galleryPhoto => {
+      return {
+        ...galleryPhoto,
+        favorite: galleryPhoto.id === photo.id 
+          ? !photo.favorite
+          : photo.favorite
+      };
+    }));
   };
 
   return (
