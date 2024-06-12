@@ -7,6 +7,7 @@ import backgroundImage from './assets/banner.png'
 import Gallery from "./components/Gallery"
 import photos from "./fotos.json";
 import ModalZoom from "./components/ModalZoom";
+import Footer from "./components/Footer"
 import { useEffect, useState } from "react";
 
 const GradientBackground = styled.div`
@@ -80,7 +81,7 @@ function App() {
           photo={selectedPhoto}
           favorite={favorite}
           onClose={() => SetSelectedPhoto(null)} />
-        
+        <Footer />
       </GradientBackground>
     </>
   )
