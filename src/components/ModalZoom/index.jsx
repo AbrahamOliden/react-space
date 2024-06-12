@@ -30,12 +30,15 @@ const StyledDialog = styled.dialog`
     }
 `
 
-function ModalZoom({ photo, onClose }) {
+function ModalZoom({ photo, favorite, onClose }) {
     return <>
     {photo && <>
         <Overlay />
         <StyledDialog open={!!photo}>
-            <Card data={photo} expand={true}/>
+            <Card 
+                data={photo} 
+                expand={true}
+                favorite={favorite}/>
             <form method="dialog">
                 <button onClick={onClose}>
                     <img src="/iconos/cerrar.png" alt="close button" />

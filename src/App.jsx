@@ -76,7 +76,10 @@ function App() {
             </SectionContainer>
           </MainContainer>
         </AppContainer>
-        <ModalZoom photo={selectedPhoto} onClose={() => SetSelectedPhoto(null)} />
+        <ModalZoom 
+          photo={selectedPhoto}
+          favorite={favorite}
+          onClose={() => SetSelectedPhoto(null)} />
         
       </GradientBackground>
     </>
