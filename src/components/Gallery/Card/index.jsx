@@ -40,7 +40,7 @@ const StyledFooter = styled.footer`
     }
 `
 
-function Card({ data=[], favActive, favInnactive, expandIcon, expand=false }) {
+function Card({ data, onZoom, favActive, expand=false }) {
 
     const {titulo, fuente, path} = data;
 
@@ -53,10 +53,13 @@ function Card({ data=[], favActive, favInnactive, expandIcon, expand=false }) {
                     <h4>{fuente}</h4>
                     <div>
                         <IconButton>
-                            <img src={favInnactive} alt="Favorite icon"/>
+                            <img src={'/iconos/favorito.png'} alt="Favorite icon"/>
                         </IconButton>
-                        {!expand && <IconButton aria-hidden={expand} >
-                            <img src={expandIcon} alt="Expand icon"/>
+                        {!expand && 
+                        <IconButton 
+                            aria-hidden={expand} 
+                            onClick={() => onZoom(data)} >
+                            <img src={'/iconos/expandir.png'} alt="Expand icon"/>
                         </IconButton>}
 
                     </div>
