@@ -40,6 +40,7 @@ const SectionContainer = styled.section`
 function App() {
 
   const [images, setImages] = useState(photos);
+  const [selectedPhoto, SetSelectedPhoto] = useState(null);
 
   return (
     <>
@@ -53,13 +54,17 @@ function App() {
             <SideBar />
             <SectionContainer>
 
-              <Banner text={'The most complete space photos gallery'} backgroundImage={backgroundImage} />
-              <Gallery images={images} />
+              <Banner 
+                text={'The most complete space photos gallery'} 
+                backgroundImage={backgroundImage} />
+              <Gallery 
+                selectPhoto={photo => SetSelectedPhoto(photo)} 
+                images={images} />
 
             </SectionContainer>
           </MainContainer>
         </AppContainer>
-        <ModalZoom />
+        <ModalZoom photo={selectedPhoto}/>
         
       </GradientBackground>
     </>
